@@ -30,6 +30,9 @@ Goal:
   - [Table of contents](#table-of-contents)
 - [1. Introduction](#1-introduction)
   - [1.1 Models \& Modalities](#11-models--modalities)
+    - [The text realm](#the-text-realm)
+    - [The image realm](#the-image-realm)
+    - [The audio realm](#the-audio-realm)
   - [1.3 Hot tools \& Immersing yourself](#13-hot-tools--immersing-yourself)
 - [2. Prompt Techniques](#2-prompt-techniques)
 - [3. Prompt Chaining](#3-prompt-chaining)
@@ -59,7 +62,7 @@ Here's an overview of what will be covered in this guide:
 
 ![Prompt engineering across modalities](./multi-modal-system.drawio.png)
 
-**The text realm**
+### The text realm
 
 The text realm is the most interesting realm for most people. It comprises all possible things you can do with text by predicting the next word. A couple things which this guide will cover are:
 
@@ -77,7 +80,7 @@ Popular models in the text realm include but aren't limited to:
 - Claude 2 (Anthropic)
 - Bard (Google)
 
-**The image realm**
+### The image realm
 
 In the image realm we can also transform things.
 
@@ -87,7 +90,7 @@ In this guide we'll cover:
 - **Image Analysis**: A relatively new transformation that is gaining popularity: GPT4-V and LLaVa are currently the top of the line image analysers
 - **Image Editing**: We can use text and image instructions to edit an entire image or part of it. OpenAI, StabilityAI, and MidJourney all have these type of models.
 
-**The audio realm**
+### The audio realm
 
 In the audio realm, these are the different transformations we'll cover:
 
