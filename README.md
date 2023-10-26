@@ -37,7 +37,8 @@ Goal:
 - [2. Prompt Techniques](#2-prompt-techniques)
 - [3. Prompt Chaining](#3-prompt-chaining)
 - [4. Prompt Engineering in practice](#4-prompt-engineering-in-practice)
-- [5. Appendix](#5-appendix)
+- [5. Agentic AI](#5-agentic-ai)
+- [6. Appendix](#6-appendix)
   - [Other resources](#other-resources)
 
 # 1. Introduction
@@ -114,6 +115,8 @@ In this guide, we'll use the interactive ActionSchema playground to show differe
 
 # 2. Prompt Techniques
 
+Coming soon. Topics:
+
 - Zero-shot prompts
 - Few-shot prompts
 - Chain of thought (CoT): https://www.promptingguide.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcot.1933d9fe.png&w=1920&q=75
@@ -125,7 +128,11 @@ In this guide, we'll use the interactive ActionSchema playground to show differe
 - Active Prompt is CoT prompting where the examples are dynamic (https://www.promptingguide.ai/techniques/activeprompt)
 - Tool-use, ReAct (Reason & Act), MRKL (Modular Reasoning, Knowledge and Language), PAL (Program-Aided Language Models): Let a LLM intermittently choose and use tools, get the result of it, and continue
 
+For early access, see [my workshop](https://www.actionschema.com/about/workshop.md)
+
 # 3. Prompt Chaining
+
+Coming soon. Topics:
 
 - Data Structurization
 - Context Building
@@ -133,7 +140,11 @@ In this guide, we'll use the interactive ActionSchema playground to show differe
 - Prompt with feedback loops
 - Self Reflection
 
+For early access, see [my workshop](https://www.actionschema.com/about/workshop.md)
+
 # 4. Prompt Engineering in practice
+
+Coming soon. Topics:
 
 - Experimentation
 - Cost tracking and reduction
@@ -143,7 +154,19 @@ In this guide, we'll use the interactive ActionSchema playground to show differe
 - Reliability: Feedback loops, validation prompts
 - Privacy: legislation compliance, anonimisation
 
-# 5. Appendix
+For early access, see [my workshop](https://www.actionschema.com/about/workshop.md)
+
+# 5. Agentic AI
+
+Coming soon. For early access, see [my workshop](https://www.actionschema.com/about/workshop.md)
+
+Topics:
+
+- Intro to AutoGPT-like Agents
+- Landscape
+- AI Safety
+
+# 6. Appendix
 
 ## Other resources
 
