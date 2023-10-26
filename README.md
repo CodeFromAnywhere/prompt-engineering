@@ -27,13 +27,31 @@ I hope you find it useful. Let's Start Prompting!
 
 ## Table of contents
 
-**1. Introduction**
+- [A practical and interactive prompt engineering guide for Humans](#a-practical-and-interactive-prompt-engineering-guide-for-humans)
+  - [Table of contents](#table-of-contents)
+- [1. Introduction](#1-introduction)
+  - [1.1 Models \& Modalities](#11-models--modalities)
+  - [1.2 The Hottest Tools](#12-the-hottest-tools)
+  - [1.3 Immersing yourself](#13-immersing-yourself)
+- [2. Prompt Techniques](#2-prompt-techniques)
+- [3. Prompt Chaining](#3-prompt-chaining)
+- [4. Prompt Engineering in practice](#4-prompt-engineering-in-practice)
+- [5. Appendix](#5-appendix)
+  - [Other resources](#other-resources)
 
-- **1.1** Models & Modalities
-- **1.2** The Hottest Tools
-- **1.3** Immersing yourself
+# 1. Introduction
 
-**2. Prompt Techniques**
+## 1.1 Models & Modalities
+
+- Text, Image and Audio omni-directional
+- LMMs
+- Choosing the right model
+
+## 1.2 The Hottest Tools
+
+## 1.3 Immersing yourself
+
+# 2. Prompt Techniques
 
 - Zero-shot prompts
 - Few-shot prompts
@@ -46,7 +64,7 @@ I hope you find it useful. Let's Start Prompting!
 - Active Prompt is CoT prompting where the examples are dynamic (https://www.promptingguide.ai/techniques/activeprompt)
 - Tool-use, ReAct (Reason & Act), MRKL (Modular Reasoning, Knowledge and Language), PAL (Program-Aided Language Models): Let a LLM intermittently choose and use tools, get the result of it, and continue
 
-**3. Prompt Chaining**
+# 3. Prompt Chaining
 
 - Data Structurization
 - Context Building
@@ -54,7 +72,7 @@ I hope you find it useful. Let's Start Prompting!
 - Prompt with feedback loops
 - Self Reflection
 
-**4. Prompt Engineering in practice**
+# 4. Prompt Engineering in practice
 
 - Experimentation
 - Cost tracking and reduction
@@ -64,21 +82,9 @@ I hope you find it useful. Let's Start Prompting!
 - Reliability: Feedback loops, validation prompts
 - Privacy: legislation compliance, anonimisation
 
-**5. Appendix**
+# 5. Appendix
 
-- Other resources
-
-## Introduction
-
-Models & Modalities
-
-- Text, Image and Audio omni-directional
-- LMMs
-- Choosing the right model
-
-## Appendix
-
-### Other resources
+## Other resources
 
 If you want to go deeper into the science, here are some awesome resources to learn more about prompt engineering.
 
