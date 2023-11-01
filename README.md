@@ -139,7 +139,7 @@ Coming soon.
 - Tool-use, ReAct (Reason & Act), MRKL (Modular Reasoning, Knowledge and Language), PAL (Program-Aided Language Models): Let a LLM intermittently choose and use tools, get the result of it, and continue
 -->
 
-For early access, see [my workshop](https://www.actionschema.com/about/workshop.md)
+For early access, see [my workshop](https://www.actionschema.com/learn)
 
 # 3. Prompt Chaining
 
@@ -151,7 +151,7 @@ Coming soon. Topics:
 - Prompt with feedback loops
 - Self Reflection
 
-For early access, see [my workshop](https://www.actionschema.com/about/workshop.md)
+For early access, see [my workshop](https://www.actionschema.com/learn)
 
 # 4. Prompt Engineering in practice
 
@@ -165,11 +165,11 @@ Coming soon. Topics:
 - Reliability: Feedback loops, validation prompts
 - Privacy: legislation compliance, anonimisation
 
-For early access, see [my workshop](https://www.actionschema.com/about/workshop.md)
+For early access, see [my workshop](https://www.actionschema.com/learn)
 
 # 5. Agentic AI
 
-Coming soon. For early access, see [my workshop](https://www.actionschema.com/about/workshop.md)
+Coming soon. For early access, see [my workshop](https://www.actionschema.com/learn)
 
 Topics:
 
