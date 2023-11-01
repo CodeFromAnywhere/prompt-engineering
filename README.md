@@ -20,6 +20,14 @@ Goal:
 - Turn this single document into many many social media stories.
 - Use this as a foundation of AIGrunn presentation also.
 
+TODO:
+
+- Once a week, mention that I finished another part of the course on twitter and linkedin, with CTA for people interested in the entire thing. After people respond/react, send them the course. Roll this out over 13 weeks (3 months). Posts can be added each time I work on this via buffer
+- Once I'm halfway, send the draft of the course to leads
+- Embed tables by adding them to the course category. For each table, make a screenshot that is clickable as well as add the link "Go to playground".
+- Create a sales page in front of the course (something like this: https://maven.com/dair-ai/prompt-engineering-llms) where I can give it for free to people with a code.
+
+
 -->
 
 # A practical and interactive prompt engineering guide for Humans
@@ -32,7 +40,7 @@ Goal:
   - [1.1 Models \& Modalities](#11-models--modalities)
     - [The text realm](#the-text-realm)
     - [The image realm](#the-image-realm)
-    - [The audio realm](#the-audio-realm)
+    - [The Audio Realm](#the-audio-realm)
   - [1.3 Hot tools \& Immersing yourself](#13-hot-tools--immersing-yourself)
 - [2. Prompt Techniques](#2-prompt-techniques)
 - [3. Prompt Chaining](#3-prompt-chaining)
@@ -91,7 +99,7 @@ In this guide we'll cover:
 - **Image Analysis**: A relatively new transformation that is gaining popularity: GPT4-V and LLaVa are currently the top of the line image analysers
 - **Image Editing**: We can use text and image instructions to edit an entire image or part of it. OpenAI, StabilityAI, and MidJourney all have these type of models.
 
-### The audio realm
+### The Audio Realm
 
 In the audio realm, these are the different transformations we'll cover:
 
@@ -115,7 +123,9 @@ In this guide, we'll use the interactive ActionSchema playground to show differe
 
 # 2. Prompt Techniques
 
-Coming soon. Topics:
+Coming soon.
+
+<!--Topics:
 
 - Zero-shot prompts
 - Few-shot prompts
@@ -127,6 +137,7 @@ Coming soon. Topics:
 - Retreival Augmented Generation (RAG): https://www.promptingguide.ai/techniques/rag
 - Active Prompt is CoT prompting where the examples are dynamic (https://www.promptingguide.ai/techniques/activeprompt)
 - Tool-use, ReAct (Reason & Act), MRKL (Modular Reasoning, Knowledge and Language), PAL (Program-Aided Language Models): Let a LLM intermittently choose and use tools, get the result of it, and continue
+-->
 
 For early access, see [my workshop](https://www.actionschema.com/about/workshop.md)
 
