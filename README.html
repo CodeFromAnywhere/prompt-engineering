@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<!--
+
+---
+target-audience: LLM's that are used to create ActionSchema's
+---
+
+Content:
+
+- It should summarize key concepts of prompt engineering that are required for quality of inference.
+- It should provide concrete examples and the steps required to choose the right prompts.
+- It should differentiate from other popular prompt engineering guides. They are very scientific and non practical, not easy to learn with
+- It could have an added video course attached.
+
+Goal:
+
+- Give myself a good overview of the different prompt engineering techniques I've found
+- Document with instant value of top tips/tricks of prompt engineering to get leads on LinkedIn
+- Ensure each prompt technique has a good example in a static table
+- Update the static table so you can see the values nicely but also the plugins used become clear faster
+- Turn this single document into many many social media stories.
+- Use this as a foundation of AIGrunn presentation also.
+
+TODO:
+
+- Once a week, mention that I finished another part of the course on twitter and linkedin, with CTA for people interested in the entire thing. After people respond/react, send them the course. Roll this out over 13 weeks (3 months). Posts can be added each time I work on this via buffer.
+- Once I'm halfway, send the draft of the course to leads (whatsapp as well as linkedin poll voters as well as warm leads up my sales funnel)
+- Embed tables by adding them to the course category. For each table, make a screenshot that is clickable as well as add the link "Go to playground".
+- Create a sales page in front of the course (something like this: https://maven.com/dair-ai/prompt-engineering-llms) where I can give it for free to people with a code.
+
+
+-->
+<h1 id="a-practical-and-interactive-prompt-engineering-guide-for-lead-generation">A practical and interactive prompt engineering guide for lead generation</h1>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#a-practical-and-interactive-prompt-engineering-guide-for-lead-generation">A practical and interactive prompt engineering guide for lead generation</a>
+<ul>
+<li><a href="#table-of-contents">Table of contents</a></li>
+</ul>
+</li>
+<li><a href="#1-introduction">1. Introduction</a>
+<ul>
+<li><a href="#11-why-prompt-engineering">1.1: Why prompt engineering?</a></li>
+<li><a href="#12-models--modalities">1.2: Models &amp; Modalities</a>
+<ul>
+<li><a href="#the-text-realm">The text realm</a></li>
+<li><a href="#the-image-realm">The image realm</a></li>
+<li><a href="#the-audio-realm">The Audio Realm</a></li>
+</ul>
+</li>
+<li><a href="#13-hot-tools--immersing-yourself">1.3: Hot tools &amp; Immersing yourself</a></li>
+</ul>
+</li>
+<li><a href="#2-challenges-building-llm-apps">2. Challenges building LLM apps</a>
+<ul>
+<li><a href="#genai-doesnt-comply-with-privacy-laws">GenAI doesn't comply with privacy laws</a></li>
+<li><a href="#genai-is-unreliable">GenAI is unreliable</a></li>
+<li><a href="#genai-tools-are-harmful-or-unethical">GenAI tools are harmful or unethical</a></li>
+<li><a href="#genai-is-too-expensive">GenAI is too expensive</a></li>
+<li><a href="#genais-context-size-is-too-small">GenAI's context-size is too small</a></li>
+<li><a href="#genais-responses-arent-formatted-right">GenAI's responses aren't formatted right</a></li>
+</ul>
+</li>
+<li><a href="#3-prompt-techniques">3. Prompt Techniques</a></li>
+<li><a href="#4-prompt-chaining">4. Prompt Chaining</a></li>
+<li><a href="#5-agentic-ai">5. Agentic AI</a></li>
+<li><a href="#6-appendix">6. Appendix</a>
+<ul>
+<li><a href="#other-resources">Other resources</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-introduction">1. Introduction</h1>
+<p>Prompt engineering is a new science and practice that is all about the use of transformer AI in the best possible way. It comprises lots of different tools, techniques and practicalities. In this interactive guide I aim to make this new discipline approachable for any cognitive worker that wants to explore how this can have a positive impact in their career or within their business.</p>
+<p>This guide does not go in-depth into the technical and scientific aspects, nor does it show you the inner workings of ML and Transformer AI models. Instead, my aim of this guide is to help you on your way to apply prompt engineering in your business and teach your fellow coworkers about the wonders of generative AI. That's why this guide will give you practical examples and applications of the different tools and techniques, and even makes it interactive, straight from the guide!</p>
+<p>I hope this guide will serve you as a go-to place to look up useful tips, tricks, hacks, and tools. I hope you can use it to become to drastically enhance your efficiency and productivity in your carreer, whatever you do.</p>
+<p>My name is Wijnand Karsens, and with a background in AI, App/web development and psychology, I have developed a tool called <a href="https://actionschema.com">ActionSchema</a> that will help making this guide more interactive and compelling.</p>
+<p>I hope you find it useful. Let's Start Prompting!</p>
+<h2 id="11-why-prompt-engineering">1.1: Why prompt engineering?</h2>
+<p>When I started building this course, I found through search volume analysis that the world showed about twice as much interest in learning about prompt engineering compared to learning about all frontend programming languages combined. This is huge! And there's a good reason for it.</p>
+<p>In my view, prompt engineering is about all the things needed for creating value with generative AI. According to <a href="https://www.ey.com">EY</a>, 70% of CEO's is accelerating investments into generative AI. That means that the majority of companies wants to spend money on people that know what they're talking about in this area of expertise. Besides that, VC's have invested 5x more into generative AI in the first half of 2023 compared to one year before. If these signals aren't enough reason to learn about this new skillset, I have a more subjective argument for you: prompt engineering is magical and the things you can do with it have never been seen before. We're entering a new age of automation in which we can really start to automate mundane work like never before.</p>
+<p>So if you want to position yourself into a market that's potentially yet to grow by orders of magnitude (and is already huge).. If you want to be on the frontier of applying magical technology... Then you should definitely learn more about prompt engineering!</p>
+<h2 id="12-models--modalities">1.2: Models &amp; Modalities</h2>
+<p>Prompt engineering is mostly meant for Generative Transformer Models that have become popular after the 2017 paper <a href="https://arxiv.org/abs/1706.03762">Attention is all you need</a>. Prompt engineering is the science of understanding a models capabilities, and using the model in the best possible way to get desired outcomes.</p>
+<p>In this guide, we'll cover different techniques and different models in multiple modalities. The most important modality is the text-domain. Models like GPT-3.5 (ChatGPT) and GPT4 have become popular in the beginning of 2023. However, the same transformer models are also applied in the image and audio domain. This guide also covers image generation, image analysis, text to speech, and speech to text.</p>
+<p>Here's an overview of what will be covered in this guide:</p>
+<p><img src="./multi-modal-system.drawio.png" alt="Prompt engineering across modalities"></p>
+<h3 id="the-text-realm">The text realm</h3>
+<p>The text realm is the most interesting realm for most people. It comprises all possible things you can do with text by predicting the next word. A couple things which this guide will cover are:</p>
+<ul>
+<li>Question answering</li>
+<li>Completion</li>
+<li>Chat</li>
+<li>Categorization</li>
+<li>Data Structurization</li>
+</ul>
+<p>Popular models in the text realm include but aren't limited to:</p>
+<ul>
+<li>ChatGPT or GPT 3.5 turbo (OpenAI)</li>
+<li>GPT4 (OpenAI)</li>
+<li>LLaMa 2 (Meta)</li>
+<li>Claude 2 (Anthropic)</li>
+<li>Bard (Google)</li>
+</ul>
+<h3 id="the-image-realm">The image realm</h3>
+<p>In the image realm we can also transform things.</p>
+<p>In this guide we'll cover:</p>
+<ul>
+<li><strong>Image Generation</strong>: Models such as MidJourney, Stable Diffusion XL, and Dall-E 3 have gained recent popularity</li>
+<li><strong>Image Analysis</strong>: A relatively new transformation that is gaining popularity: GPT4-V and LLaVa are currently the top of the line image analysers</li>
+<li><strong>Image Editing</strong>: We can use text and image instructions to edit an entire image or part of it. OpenAI, StabilityAI, and MidJourney all have these type of models.</li>
+</ul>
+<h3 id="the-audio-realm">The Audio Realm</h3>
+<p>In the audio realm, these are the different transformations we'll cover:</p>
+<ul>
+<li><strong>Text to Speech</strong></li>
+<li><strong>Transcription / Speech to text</strong>:</li>
+<li><strong>Cleaning</strong>: Audio can be cleaned or enhanced.</li>
+</ul>
+<p><strong>Large Multimodal Models</strong></p>
+<p>Recent papers mention the emergence of Large multimodal models, which are integrated models that integrate multiple modalities into a single model. ChatGPT has recently launched vision and voice capabilities into its product, and it's expected that this will become more common as it's very useful.</p>
+<h2 id="13-hot-tools--immersing-yourself">1.3: Hot tools &amp; Immersing yourself</h2>
+<p>To learn about all the possibilities in the wonderful world of generative AI, I'd recommend to immerse yourself in a set of tools that help you across anything you do. There are many popular tools available, here are a few tips:</p>
+<ul>
+<li><a href="https://chat.openai.com">ChatGPT Plus</a> for conversations across major modalities</li>
+<li><a href="https://numerous.ai">Numerous.ai</a> for working with structured data in the text-domain</li>
+<li><a href="https://actionschema.com">ActionSchema</a> for working with structured data in any domain, and for making prompt chains</li>
+</ul>
+<p>In this guide, we'll use the interactive ActionSchema playground to show different techniques.</p>
+<h1 id="2-challenges-building-llm-apps">2. Challenges building LLM apps</h1>
+<p>When companies hear about GenAI for the first time, it often sounds very interesting, but many companies get stuck at some of the risks and pitfalls of building LLM apps that are relatively easy to overcome. In this chapter I'm diving deeper into these pitfalls and the different approaches to overcome them.</p>
+<p>After talking to dozens of industry leaders I've identified these pitfalls that the industry is getting stuck at.</p>
+<ul>
+<li>GenAI doesn't comply with <strong>privacy laws</strong></li>
+<li>GenAI <strong>hallucinates</strong> and is unreliable</li>
+<li>GenAI can be used in <strong>harmful</strong> ways</li>
+<li>GenAI is too <strong>expensive</strong></li>
+<li>GenAI's <strong>context</strong>-window is <strong>too small</strong></li>
+<li>GenAI's <strong>responses aren't formatted right</strong></li>
+</ul>
+<p>How to overcome this? Let's go over it one by one.</p>
+<h2 id="genai-doesnt-comply-with-privacy-laws">GenAI doesn't comply with privacy laws</h2>
+<!-- sensitivity -->
+<p>It depends on where in the world you live, but here in The Netherlands, there are strict privacy laws. If you want to apply Generative AI in a privacy-friendly way, it's good to consider what they are and how to comply.</p>
+<p>Privacy laws that relate to software products vary around the world, and the regulatory landscape is continually evolving. Some of the most notable privacy regulations include:</p>
+<ol>
+<li>
+<p>General Data Protection Regulation (GDPR):</p>
+<ul>
+<li>The GDPR is a comprehensive data protection regulation that applies to the European Union (EU) and the European Economic Area (EEA). It places strict requirements on the collection, processing, and storage of personal data and gives individuals greater control over their data. Companies that develop software products used by EU/EEA residents must adhere to GDPR rules.</li>
+</ul>
+</li>
+<li>
+<p>California Consumer Privacy Act (CCPA):</p>
+<ul>
+<li>The CCPA is a privacy law in California, USA, that grants California residents certain rights regarding their personal information. It applies to companies that meet certain criteria and collect personal information from California residents. Software products used in California need to comply with the CCPA's requirements.</li>
+</ul>
+</li>
+<li>
+<p>Children's Online Privacy Protection Act (COPPA):</p>
+<ul>
+<li>COPPA is a U.S. federal law that regulates the online collection of personal information from children under 13 years of age. Software products, especially those targeted at children, must comply with COPPA regulations.</li>
+</ul>
+</li>
+<li>
+<p>Health Insurance Portability and Accountability Act (HIPAA):</p>
+<ul>
+<li>HIPAA is a U.S. law that governs the privacy and security of healthcare information. Software products used in healthcare settings or that handle protected health information (PHI) must comply with HIPAA requirements.</li>
+</ul>
+</li>
+<li>
+<p>Personal Data Protection Act (PDPA) (Singapore):</p>
+<ul>
+<li>The PDPA is a data protection law in Singapore that governs the collection, use, and disclosure of personal data. Software products used in Singapore must comply with the PDPA's provisions.</li>
+</ul>
+</li>
+<li>
+<p>Personal Information Protection Law (PIPL) (China):</p>
+<ul>
+<li>PIPL is a comprehensive privacy law in China that imposes strict requirements on the processing of personal information. Software products used in China must adhere to PIPL regulations.</li>
+</ul>
+</li>
+<li>
+<p>Data Protection Directive (Brazil):</p>
+<ul>
+<li>Brazil has introduced the Data Protection Directive, which regulates the processing of personal data in the country. Software products used in Brazil must comply with its provisions.</li>
+</ul>
+</li>
+<li>
+<p>Personal Information Protection and Electronic Documents Act (PIPEDA) (Canada):</p>
+<ul>
+<li>PIPEDA is Canada's privacy law governing the collection, use, and disclosure of personal information. Software products used in Canada must adhere to PIPEDA rules.</li>
+</ul>
+</li>
+<li>
+<p>Data Protection Act 2017 (Mauritius):</p>
+<ul>
+<li>Mauritius has its own data protection legislation, the Data Protection Act 2017, which regulates the processing of personal data. Software products used in Mauritius must comply with this law.</li>
+</ul>
+</li>
+<li>
+<p>Personal Data Protection Act (PDPA) (South Korea):</p>
+<ul>
+<li>South Korea's PDPA governs the processing of personal data and applies to software products used in South Korea.</li>
+</ul>
+</li>
+</ol>
+<p>These are just a few examples of privacy laws around the world that can impact software products. Compliance with these laws often involves implementing data protection measures, providing transparency to users, obtaining consent, and appointing data protection officers where required. Software developers and businesses should stay informed about privacy regulations in the regions where they operate or have users to ensure compliance and protect user data.</p>
+<p>When you're using AI tooling professionally, it's important to know which privacy laws apply at your job and for which data. If you're considering making an application with generative AI, it's important to consider this when choosing the right integration to use.</p>
+<p>In general, if you're building an AI app, you can consider these options:</p>
+<p><strong>Running GenAI on someone elses infrastructure, anywhere:</strong></p>
+<p>As of 2023, Dutch companies using the OpenAI API are running their prompts on OpenAI infrastructure in the USA. Depending on what type of context you provide in your prompts it can easily violate GDPR and other privacy laws.</p>
+<p>Usually it's the easiest way to start though and if you can use this all the way through you don't need to worry about anything.</p>
+<p><strong>Running GenAI on someone elses infrastructure, nearby:</strong></p>
+<p>It's generally easier to comply with privacy laws if you use infrastructure hosted in the same country or continent. GDPR requires you to process personally identifyable information in Europe. This is easy to do as long as you use the right integrations. OpenAI doesn't allow you to run your API calls in Europe (as of yet) but their partner Microsoft offers Azure, which DOES allow you to run it in Europe. LLMOps solutions like Orquesta.cloud can help you choosing the right integrations via a gateway.</p>
+<p><strong>Running GenAI on your own infrastructure, locally:</strong></p>
+<p>In some niche business cases, it's required to run things completely locally. For example, in the health industry this is a common requirement. If you need to run things completely locally it's usually possible to find good open source models that work for your use case. These open source models are usually allowed to be used comercially (but make sure you check the licence).</p>
+<p>An example of a cool use-case is <a href="https://apps.apple.com/us/app/find-clarity/id1671806331">Find Clarity</a>. This app allows anyone to transcribe their voice in realtime from their iPhone without the use of an internet connection! It was built by someone in my team and runs <a href="https://github.com/ggerganov/whisper.cpp">Whisper.cpp</a> locally on the iPhone. With the right open source libraries you can run almost any open source model on user devices nowadays. Depending on the performance this makes some interesting use-cases possible, especially if privacy-reasons or cost didn't make it practical before. Running on someone's device without backend is practically free!</p>
+<p>Another great library is <a href="https://github.com/ggerganov/llama.cpp">LLama.cpp</a> by the same author. Where Whisper.cpp allows you to run transcription apps locally on any device, llama.cpp allows you to run Large Language Models on any device. There are similar models for any other modality too.</p>
+<p>As a general advice I'd say that this option should be chosen only if it's really needed for your use-case and there's no other option. Also it's usually better to first validate your product before you solve the problem of production operations. It's much more work to set this up and scale it, and usually it's even more expensive than using an API of a third party (because of scaling effects).</p>
+<p>Some companies choose to go a step further and build their own models. This was more common before the coming of foundational GenAI models but is still often done, but can often be avoided. It's extremely expensive and time consuming to build your own models and generic foundation models of today are often good enough.</p>
+<h2 id="genai-is-unreliable">GenAI is unreliable</h2>
+<p>Hallucination is a major objection for using Generative AI professionally. There are many techniques that can prevent AI from hallucinating though!</p>
+<!-- - explainability, interpretability, safety
+- reliability, accuracy -->
+<p>RAG: Retreival Augmented Generation</p>
+<p>Context building</p>
+<p><img src="./gptide.png" alt=""></p>
+<p>Enforce Explicit constraints</p>
+<p>Validation prompts: Double-check to enforce</p>
+<p>Feedback loops: restart if it fails</p>
+<p>[example] Analysing 1.8M apps or courses: Pipeline graph</p>
+<h2 id="genai-tools-are-harmful-or-unethical">GenAI tools are harmful or unethical</h2>
+<!-- responsible, moral, ethical -->
+<p>Double edged sword</p>
+<p>Post AGI Focus: Strengthening Relations, Community, Purpose</p>
+<p>Trying to <strong>embed safety</strong> into your product, don't make it an after-thought</p>
+<p>Analyse use of your tool automatically and anonimously with <strong>meta analysis</strong>.</p>
+<p><strong>Purpose driven access</strong> to my shovel</p>
+<p><strong>Solving the metacrisis</strong> by indexing impact on doughnut-economics model</p>
+<p>For early access, see <a href="https://www.actionschema.com/learn">my workshop</a></p>
+<h2 id="genai-is-too-expensive">GenAI is too expensive</h2>
+<ul>
+<li>Make simpler prompts, use cheaper models</li>
+<li>99% of the time you don't need GPT4</li>
+<li>Create vectorization once, run your prompts practically free</li>
+</ul>
+<h2 id="genais-context-size-is-too-small">GenAI's context-size is too small</h2>
+<p>Chunking</p>
+<p>Summarizing</p>
+<p>Vector Embedding --&gt; Semantic Search --&gt; LLama Index</p>
+<p>[Example] Writing an online course/book. [Pipeline-graph]</p>
+<p>[Demo writing a book about AI Grunn with Characters]</p>
+<h2 id="genais-responses-arent-formatted-right">GenAI's responses aren't formatted right</h2>
+<p>Solution: JSON GPT</p>
+<p>[show code]</p>
+<p>Tool use</p>
+<p>[show code AI plugin]</p>
+<p><img src="https://www.karsens.com/domains/karsens.com/blog/coding/scrapingbee-gpt/scrapingbee.png" alt=""></p>
+<h1 id="3-prompt-techniques">3. Prompt Techniques</h1>
+<p>In this chapter I will go over the most useful prompt techniques. Coming soon.</p>
+<!--Topics:
+
+- Zero-shot prompts
+- Few-shot prompts
+- Chain of thought (CoT): https://www.promptingguide.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcot.1933d9fe.png&w=1920&q=75
+- Zero-shot Chain of Thought (CoT): https://www.promptingguide.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fzero-cot.79793bee.png&w=1920&q=75
+- Self consistency: https://arxiv.org/abs/2203.11171
+- Generate knowledge prompting: https://www.promptingguide.ai/techniques/knowledge
+- Tree of thoughts: https://www.promptingguide.ai/techniques/tot
+- Retreival Augmented Generation (RAG): https://www.promptingguide.ai/techniques/rag
+- Active Prompt is CoT prompting where the examples are dynamic (https://www.promptingguide.ai/techniques/activeprompt)
+- Tool-use, ReAct (Reason & Act), MRKL (Modular Reasoning, Knowledge and Language), PAL (Program-Aided Language Models): Let a LLM intermittently choose and use tools, get the result of it, and continue
+-->
+<p>For early access, see <a href="https://www.actionschema.com/learn">my workshop</a></p>
+<h1 id="4-prompt-chaining">4. Prompt Chaining</h1>
+<p>Coming soon. Topics:</p>
+<ul>
+<li>Data Structurization</li>
+<li>Context Building</li>
+<li>Validation prompts</li>
+<li>Prompt with feedback loops</li>
+<li>Self Reflection</li>
+</ul>
+<p>For early access, see <a href="https://www.actionschema.com/learn">my workshop</a></p>
+<h1 id="5-agentic-ai">5. Agentic AI</h1>
+<p>Coming soon. For early access, see <a href="https://www.actionschema.com/learn">my workshop</a></p>
+<p>Topics:</p>
+<ul>
+<li>Intro to AutoGPT-like Agents</li>
+<li>Landscape</li>
+<li>AI Safety</li>
+</ul>
+<h1 id="6-appendix">6. Appendix</h1>
+<h2 id="other-resources">Other resources</h2>
+<p>If you want to go deeper into the science, here are some awesome resources to learn more about prompt engineering.</p>
+<ul>
+<li><a href="https://github.com/dair-ai/Prompt-Engineering-Guide">Dair.ai Prompt Engineering Guide</a></li>
+<li><a href="https://github.com/brexhq/prompt-engineering">Brex's Prompt Engineering Guide</a></li>
+<li><a href="https://github.com/trigaten/Learn_Prompting">Trigaten's Learn Prompting</a></li>
+<li><a href="https://github.com/openai/openai-cookbook">OpenAI Cookbook</a></li>
+</ul>
+
+</body>
+</html>
