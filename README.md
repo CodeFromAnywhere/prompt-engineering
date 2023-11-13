@@ -30,11 +30,13 @@ TODO:
 
 -->
 
-# A practical and interactive prompt engineering guide for lead generation
+# Learn how to make your GPTs
+
+This is a practical and interactive prompt engineering guide for humans.
 
 ## Table of contents
 
-- [A practical and interactive prompt engineering guide for lead generation](#a-practical-and-interactive-prompt-engineering-guide-for-lead-generation)
+- [Learn how to make your GPTs](#learn-how-to-make-your-gpts)
   - [Table of contents](#table-of-contents)
 - [1. Introduction](#1-introduction)
   - [1.1: Why prompt engineering?](#11-why-prompt-engineering)
